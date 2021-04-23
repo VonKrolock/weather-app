@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:whitesmoke;
+  font-weight: bold;
+}
+body{
+  max-width: 970px;
+  margin: 0 auto;
+  padding-top: 40px;
+  background-color: rgba(202, 193, 193, 0.1);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 0.7rem;
+  z-index: 1;
+}
+.btn,select,input,option{
+  padding: 7px 12px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid whitesmoke;
+  background: none;
+  font-size: 14px;
+}
+
+select option {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+.btn:hover{
+  background-color: rgba(155, 151, 151,.4);
+  cursor: pointer;
+}
+.error{
+ background-color: red;
+ padding: .5rem .9rem;
+ border-radius: 5px;
+}
+.dateTimeContainer{
+  display: flex;
+}
+.weather__today{
+  margin: 1rem;
+  padding: 0.7rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.weather__today h3{
+  font-size: 2rem;
+}
+.result{
+  margin-top: 1rem;
+  display: flex;
+}
+.result h1{
+  font-size: 10rem;
+}
+.result h1 span{
+  font-size: 5rem;
+  position: absolute;
+}
+.list{
+  list-style-type: none;
+  margin-left: 10px;
+}
+.weather__three{
+  margin-top: -90px;
+  max-width: 50%;
+ 
+}
+.weather__three__days,.weather__three__temp{
+  display: flex;
+  justify-content: start;
+}
+.weather__three__days-day{
+  margin-left: 50px;
+}
+.weather__three__days-temp{
+  font-size: 36px;
+  margin-left: 50px;
+  max-width: 60px;
+  margin-top: -40px;
+}
+.weather__icon img{
+  width: 50px;
+  margin-left: 110px;
+  margin-top: -6%;
+}
+.geo{
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+ }
+.geolocation{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   padding: 10px 0px;
+   font-size: 20px;
+}
+
+@media(min-width:501px) and (max-width:768px){
+ 
+  .header{
+    width: 500px;
+    margin-left: 5rem;
+    margin-top: 20px;
+  }
+  .city{
+    margin-left: 135px;
+    text-align: center;
+  }
+  .dateTimeContainer{
+    margin-left: 250px;
+    margin-top: 10px;
+  }
+  .geo{
+    width: 300px;
+    height: 250px;
+  }
+  .geo_container{
+    position: absolute;
+    top: 55%;
+    left: 26%;
+  }
+  .geolocation{
+    flex-direction: row;
+    padding: 1rem;
+    margin-left: -17px;
+  }
+  .lon{
+    margin-right: 1rem;
+  }
+
+  .result{
+    margin-top: -10px;
+    margin-left: 140px;
+  }
+  .weather__three{
+    margin-top: -10px;
+    margin-left: 120px;
+  }
+}
+
+@media(min-width:320px) and (max-width:500px){
+   body{
+      max-width: 310px;
+      margin: 0 auto;
+      margin-top: -45px;
+      background-size: 100% 100%;
+      
+    }
+    .header{
+      flex-direction: column;
+      margin: 1rem;
+      padding: 0.7rem;
+      max-width: 320px;
+   }
+    .container{
+      margin: auto;
+      max-width: 200px;
+      margin-left: 40px;
+      max-width: 320px;
+    }
+    form{
+      margin-left: 15px;
+      max-width: 320px;
+    }
+    form input{
+      width: 200px;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+    .search{
+      margin-top: 10px;
+      width: 100px;
+      margin-left: 75px;
+    }
+    .weather__container h3{
+     font-size: 1.5rem;
+     margin-top: -40px;
+     text-align: center;
+     margin-left: -10px;
+     }
+    .dateTimeContainer{
+      margin-left: 60px;
+    }
+    .list .list__item__zero{
+    margin-left: 30px;
+    }
+    .result h1{
+      font-size: 7rem;
+      margin-top: 105px;
+      margin-left: -25px;
+    }
+    .result .list{
+      margin-top: 45px;
+    }
+    .geo{
+      width: 150px;
+      height: 150px;
+      opacity: 1;
+      margin-left: -20px;
+    }
+    .geolocation{
+      flex-direction: row;
+      padding-left: 1rem;
+      font-size: 16px;
+      margin-left: -90px;
+    }
+    .lat{
+      margin-left: 8px;
+    }
+    .geo_container{
+      margin-left: 33.3%;
+    }
+    .result{
+      margin-top: -90px;
+    }
+    .weather__three__days__container{
+      width: 90%;
+      margin-top: 60px;
+      margin-left: -41px;
+    }
+    .weather__today{
+      margin: 1rem;
+      padding: 0.7rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Weather App</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <button class="btn btn__refresh">&#x27f3;</button>
+      <select class="select">
+        <option class="option" value="en">EN</option>
+        <option class="option" value="ru">RU</option>
+        <option class="option" value="by">BY</option>
+      </select>
+      <button class="btn btn__celc"><span>&deg;</span>C</button>
+      <button class="btn btn__fahr"><span>&deg;</span>F</button>
+    </div>
+    <p class="err"></p>
+    <form>
+      <input type="search" id="searchTerm" autocomplete="off" autofocus="autofocus" placeholder="Search city or ZIP">
+      <button class="btn search">Search</button>
+    </form>
+  </header>
+
+  <section class="weather__today">
+    <div class="weather__container">
+        <h3 class="city"></h3>
+        <div class="dateTimeContainer">
+          <p class="date"></p>
+          <p class="clock"></p>
+      </div>
+        <div class="result">
+          <h1 class="temp"></h1>
+          <ul class="list">
+            <li class="list__item list__item__zero"></li>
+            <li class="list__item">OVERCAST</li>
+            <li class="list__item list__item__one"></li>
+            <li class="list__item list__item__two"></li>
+            <li class="list__item list__item__three"></li>
+          </ul>
+        </div>
+    </div>
+    <div class="geo_container">
+      <div id="map" class="geo"></div>
+      <div class="geolocation">
+        <p class="lon"></p>
+        <p class="lat"></p>
+      </div>
+    </div>
+   </section>
+ 
+   <section class="weather__three">
+     <div class="weather__three__days">
+       <div class="weather__three__days__container">
+          <div class="weather__three__days-day dayOne"></div>
+         <div>
+            <div class="weather__icon weather__icon__one"></div>
+            <div class="weather__three__days-temp tempOne"><span>&deg;</span></div>
+         </div>
+       </div>
+       
+       <div class="weather__three__days__container">
+          <div class="weather__three__days-day dayTwo"></div>
+          <div>
+            <div class="weather__icon weather__icon__two"></div>
+            <div class="weather__three__days-temp tempTwo"><span>&deg;</span></div>
+          </div>
+       </div>
+
+       <div class="weather__three__days__container">
+          <div class="weather__three__days-day dayThree"></div>
+          <div>
+            <div class="weather__icon weather__icon__three"></div>
+            <div class="weather__three__days-temp tempThree"><span>&deg;</span></div>
+         </div>
+       </div>
+     </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
